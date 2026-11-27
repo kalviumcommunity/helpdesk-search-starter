@@ -3,10 +3,10 @@
 Two independent parts. Only fill in the TODO sections.
 
 ## Prerequisites
-- Local PostgreSQL (Part A) and Redis (Part B)
-- Node.js 18+ (Part B)
+- Local PostgreSQL (Tasks 1-2) and Redis (Tasks 3-5)
+- Node.js 18+ (Tasks 3-5)
 
-## Part A: PostgreSQL (psql)
+## Tasks 1-2: PostgreSQL (psql)
 ```bash
 createdb helpdesk
 psql -d helpdesk -f postgres/setup.sql
@@ -14,7 +14,7 @@ psql -d helpdesk -f postgres/setup.sql
 - Task 1: `postgres/task1_assign.sql`
 - Task 2: `postgres/ANSWERS.md`
 
-## Part B: Redis app
+## Tasks 3-5: Redis app
 ```bash
 cd redis-app
 npm install
