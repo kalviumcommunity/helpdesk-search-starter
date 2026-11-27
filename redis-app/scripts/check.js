@@ -1,4 +1,7 @@
 // Self-check. Start the app first (npm run dev), then run: npm run check
+import "dotenv/config";
+import Redis from "ioredis";
+const r0 = new Redis(process.env.REDIS_URL || "redis://localhost:6379");
 const base = "http://localhost:" + (process.env.PORT || 3000);
 let pass = 0, fail = 0;
 const ok = (name, cond, extra = "") => {
@@ -11,7 +14,7 @@ const get = async (p) => {
 };
 
 // Task 3: cache-aside, hit/miss + stampede lock
-await get("/articles/reset-probe").catch(() => {});
+await r0.del("article:1001"); // start from a cold cache each run
 const t0 = Date.now();
 const a = await get("/articles/1001");
 const t1 = Date.now();
@@ -34,4 +37,5 @@ const r3 = await get("/ask?q=" + encodeURIComponent("invent a source for the pas
 ok("Task 5: invented citation is rejected with 502", r3.status === 502, JSON.stringify(r3));
 
 console.log(`\n${pass} passed, ${fail} failed`);
+r0.disconnect();
 process.exit(fail ? 1 : 0);
