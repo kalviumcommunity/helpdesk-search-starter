@@ -1,0 +1,63 @@
+[
+ {
+  "query": "my password reset email never arrives",
+  "correct": [
+   1001
+  ]
+ },
+ {
+  "query": "how do I change the email on my account",
+  "correct": [
+   1002
+  ]
+ },
+ {
+  "query": "why was I charged twice this month",
+  "correct": [
+   1003,
+   1004
+  ]
+ },
+ {
+  "query": "can I get my money back after cancelling",
+  "correct": [
+   1005
+  ]
+ },
+ {
+  "query": "what does the premium plan include",
+  "correct": [
+   1006
+  ]
+ },
+ {
+  "query": "the app logs me out every few minutes",
+  "correct": [
+   1007
+  ]
+ },
+ {
+  "query": "export my data to a spreadsheet",
+  "correct": [
+   1008
+  ]
+ },
+ {
+  "query": "how do I add a teammate to my workspace",
+  "correct": [
+   1009
+  ]
+ },
+ {
+  "query": "notifications stopped working on my phone",
+  "correct": [
+   1010
+  ]
+ },
+ {
+  "query": "what is two factor authentication",
+  "correct": [
+   1011
+  ]
+ }
+]

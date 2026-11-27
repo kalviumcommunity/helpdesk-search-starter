@@ -1,0 +1,122 @@
+[
+ {
+  "id": 1001,
+  "text": "To reset your password open Settings and choose Reset password. We email a reset link that expires in one hour."
+ },
+ {
+  "id": 1002,
+  "text": "To change your email open Settings then Profile and edit the email field. Confirm the change from the link we send."
+ },
+ {
+  "id": 1003,
+  "text": "A duplicate charge usually means a pending authorisation and a final charge. The pending one drops off within five days."
+ },
+ {
+  "id": 1004,
+  "text": "If both charges stay, contact billing with your invoice number so we can refund the extra charge."
+ },
+ {
+  "id": 1005,
+  "text": "You can cancel any time and get a refund within thirty days of purchase. Refunds return to the original card."
+ },
+ {
+  "id": 1006,
+  "text": "The premium plan adds unlimited workspaces, priority support and data export."
+ },
+ {
+  "id": 1007,
+  "text": "You are signed out after thirty minutes of inactivity. Choose Keep me signed in on the login page to stay signed in longer."
+ },
+ {
+  "id": 1008,
+  "text": "Export your data from Settings then Data. Choose CSV to open it in a spreadsheet."
+ },
+ {
+  "id": 1009,
+  "text": "Add a teammate from Workspace then Members. Enter their email and pick a role."
+ },
+ {
+  "id": 1010,
+  "text": "If push notifications stop, check that notifications are allowed for the app in your phone settings."
+ },
+ {
+  "id": 1011,
+  "text": "Two factor authentication asks for a code from your phone each time you log in, on top of your password."
+ },
+ {
+  "id": 1012,
+  "text": "Edit the company name on invoices from Billing then Company details. New invoices use the new name."
+ },
+ {
+  "id": 1013,
+  "text": "To delete your account permanently go to Settings then Danger zone. This cannot be undone."
+ },
+ {
+  "id": 1014,
+  "text": "Help article 1014: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1015,
+  "text": "Help article 1015: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1016,
+  "text": "Help article 1016: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1017,
+  "text": "Help article 1017: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1018,
+  "text": "Help article 1018: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1019,
+  "text": "Help article 1019: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1020,
+  "text": "Help article 1020: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1021,
+  "text": "Help article 1021: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1022,
+  "text": "Help article 1022: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1023,
+  "text": "Help article 1023: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1024,
+  "text": "Help article 1024: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1025,
+  "text": "Help article 1025: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1026,
+  "text": "Help article 1026: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1027,
+  "text": "Help article 1027: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1028,
+  "text": "Help article 1028: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1029,
+  "text": "Help article 1029: general tips about using the help centre and contacting support."
+ },
+ {
+  "id": 1030,
+  "text": "Help article 1030: general tips about using the help centre and contacting support."
+ }
+]

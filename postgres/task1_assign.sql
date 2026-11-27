@@ -1,0 +1,6 @@
+-- Task 1: assign ticket 10 to agent 1 (meera) in ONE transaction.
+-- Two updates, both inside BEGIN ... COMMIT:
+--   1. set the ticket's agent_id to 1 and status to 'assigned'
+--   2. add 1 to meera's open_count
+--
+-- TODO: write your BEGIN ... COMMIT block below.
