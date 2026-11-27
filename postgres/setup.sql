@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS helpdesk_ticket_log;
 DROP TABLE IF EXISTS helpdesk_tickets;
 DROP TABLE IF EXISTS helpdesk_agents;
 
@@ -13,6 +14,13 @@ CREATE TABLE helpdesk_tickets (
   agent_id    INTEGER,
   status      TEXT NOT NULL,
   created_at  TIMESTAMP NOT NULL
+);
+
+CREATE TABLE helpdesk_ticket_log (
+  id        BIGSERIAL PRIMARY KEY,
+  ticket_id INTEGER NOT NULL,
+  agent_id  INTEGER NOT NULL,
+  note      TEXT NOT NULL
 );
 
 INSERT INTO helpdesk_agents (id, name, open_count) VALUES

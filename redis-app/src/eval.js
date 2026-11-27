@@ -9,21 +9,23 @@ import { rrfFuse } from "./rrf.js";
  * appears in the top 10.
  */
 export function reciprocalRank(ranked, correctIds) {
-  // TODO
-  return 0;
+  const i = ranked.slice(0, 10).findIndex((id) => correctIds.includes(id));
+  return i === -1 ? 0 : 1 / (i + 1);
 }
 
 /** Same rule, but returns 1 if a correct id is in the top 10, else 0. */
 export function hitAt10(ranked, correctIds) {
-  // TODO
-  return 0;
+  return reciprocalRank(ranked, correctIds) > 0 ? 1 : 0;
 }
 
 function evaluate(getRanked) {
-  // TODO: loop over testSet. For each { query, correct } call getRanked(query),
-  // add up reciprocalRank and hitAt10, then return
-  // { mrr: <average>, recall: <hits / number of queries> }.
-  return { mrr: 0, recall: 0 };
+  let rr = 0, hits = 0;
+  for (const { query, correct } of testSet) {
+    const ranked = getRanked(query);
+    rr += reciprocalRank(ranked, correct);
+    hits += hitAt10(ranked, correct);
+  }
+  return { mrr: rr / testSet.length, recall: hits / testSet.length };
 }
 
 if (process.argv[1].endsWith("eval.js")) {

@@ -13,8 +13,13 @@ export const NO_ANSWER = "I cannot answer this from the supplied passages.";
  *  - user:   JSON.stringify({ question, passages: [{ post_id, text }, ...] })
  */
 export function buildMessages(question, retrieved) {
-  // TODO
-  return { system: "", user: "" };
+  // TODO (5a): write the system prompt (see the four rules above).
+  const system = "";
+  const user = JSON.stringify({
+    question,
+    passages: retrieved.map((p) => ({ post_id: p.id, text: p.text })),
+  });
+  return { system, user };
 }
 
 /**
@@ -22,20 +27,24 @@ export function buildMessages(question, retrieved) {
  * "See [1001] and [1001] and [1004]"  ->  [1001, 1004]
  */
 export function extractCitations(answer) {
-  // TODO
+  // TODO (5b): hint, from the RAG unit:
+  //   [...new Set([...answer.matchAll(/\[(\d+)\]/g)].map((m) => Number(m[1])))]
   return [];
 }
 
 /**
- * Task 5c: the full flow.
- *  1. Get the two lists for the question and fuse them with rrfFuse.
- *  2. Keep the top 3 ids and load their passages from `passages`.
- *  3. Call llm(buildMessages(question, retrieved)).
- *  4. Take the cited ids. If ANY cited id is not one of the 3 ids you sent,
- *     throw new Error("Generated citation was not in the supplied context").
- *  5. Return { answer, sources: citedIds }.
+ * Task 5c: the full flow. Steps 1 to 3 and 5 are written for you.
+ *  Your job is step 4: reject any cited id that was not one of the 3 ids sent.
  */
 export async function answerQuestion(question) {
-  // TODO
-  return { answer: "", sources: [] };
+  const { keyword, semantic } = getLists(question);
+  const ids = rrfFuse(keyword, semantic).slice(0, 3);
+  const retrieved = ids.map((id) => passages.find((p) => p.id === id));
+
+  const answer = await llm(buildMessages(question, retrieved));
+  const cited = extractCitations(answer);
+  // TODO (5c): if ANY id in `cited` is not in `ids`, throw
+  // new Error("Generated citation was not in the supplied context").
+  // Hint: cited.some((id) => !ids.includes(id))
+  return { answer, sources: cited };
 }
